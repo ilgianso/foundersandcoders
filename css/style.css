@@ -4,6 +4,8 @@
     font-family: 'Quicksand', sans-serif;
     box-sizing:border-box
 }
+
+
 .banner {
     /* background: url("../imgages/newsite.jpg"); */
     width: 100%;
@@ -23,7 +25,7 @@
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 40px;
+    font-size: 30px;
     padding: 18px;
     text-transform: uppercase;
     text-align: center;
@@ -54,7 +56,7 @@
 }
 .menu ul li a{
     color: #fff;
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
 }
 
@@ -75,12 +77,26 @@
     width: 70%;
 
 }
+
 .banner-text-items h2 {
-    font-size: 4em;
+    font-size: 40px;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 1200px) {
+
+.banner-text-items h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.menu ul li a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+}
 
 /* main-content */
 
@@ -318,80 +334,6 @@
     color: #a1b3a4;
 }
 
-
-
-
-
-@media all and (max-width:500px){
-    .top-bar {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo{
-        padding: 18px 0 0;
-    }
-    .menu ul{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 0;
-    }
-    .menu ul li{
-        padding: 5px;
-    }
-    .banner-text-items {
-        width: 100%;
-    }
-    .banner-text-items h2 {
-        font-size: 1.5em;
-    }
-    .main-content{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-}
-
-@media all and (max-width:800px) {
-    .top-bar {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo{
-        padding: 18px 0 0;
-    }
-    .menu ul{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 0;
-    }
-    .menu ul li{
-        padding: 5px;
-    }
-    .banner-text-items {
-        width: 100%;
-    }
-    .banner-text-items h2 {
-        font-size: 1.5em;
-    }
-    .main-content{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    } 
-}
-
 /* arrow to the top */
 .scrollToTopButton {
     display: none;
@@ -412,3 +354,74 @@
 .fa-arrow-up {
     color: #eae3e3
 }
+
+
+
+/* @media screen and (max-width: 600px) {
+    .top-bar {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo{
+        padding: 18px 0 0;
+    }
+    .menu ul{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .menu ul li{
+        padding: 5px;
+    }
+
+    .banner-text-items h2 {
+        font-size: 5px;
+        
+    }
+    .main-content{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+} */
+
+/* @media (max-width:800px) {
+    .top-bar {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo{
+        padding: 18px 0 0;
+    }
+    .menu ul{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .menu ul li{
+        padding: 5px;
+    }
+    .banner-text-items {
+        width: 70%;
+    }
+    .banner-text-items h2 {
+        font-size: 5px;
+    }
+    .main-content{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    } 
+} */
