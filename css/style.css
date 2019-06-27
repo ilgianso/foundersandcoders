@@ -217,93 +217,90 @@
     height: 3px;
 }
 
-/* Gallery */
 
+  
+/* slider */
 
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 100%;
+#body {
+    margin: 10px 40px;
+  }
+  
+  .home-product-new-hldr {
     position: relative;
-    margin: auto;
+    left: 20%;
+    width:1140px;
+  }  
+    
+  .home-product-new {
+    width:1140px;
+    overflow:hidden;
   }
   
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
+  .home-grid.products-grid.products-grid--max-4 {
+    transition:-ms-transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s, transform 0.5s ease 0s;
+    position:relative;
+    white-space:nowrap;
   }
   
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  .item-container {
+      display: inline-block;
+      margin: 4px;
+      vertical-align: top;
+      width:274px;
+  }  
+  
+  .slider-btn-hldr-left {
+      left: -32px;
   }
   
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  .slider-btn-hldr-right {
+      right: -32px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+  .slider-btn-hldr {
+      bottom: 0;
+      display: block;
+      padding: 0;
+      width: 24px;
+      position: absolute;
+      top: 40%;
+      z-index: 1;
   }
   
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+  .slider-btn {
+      background-color: transparent;
+      border: 0 none;
+      color: buttontext;
+      cursor: pointer;
+      display: block;
   }
   
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+  #left-btn {
+          display: none;
   }
   
-  
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  .slider-btn svg{
+    width: 24px;
+    height: 24px;
+  }
+    
+  .products-grid .item {
+      margin-left: 0;
+      background: white; 
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      float: left;
   }
   
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+
+
+
+
 
 /* contact */
 
 .contact {
     padding: 20px;
-    height: 200px;
+    height: 260px;
     background-color: #3d3737;
 }
 
@@ -332,6 +329,11 @@
 
 .contact-text a:hover {
     color: #a1b3a4;
+}
+.contact-footer{
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 20px;
 }
 
 /* arrow to the top */
