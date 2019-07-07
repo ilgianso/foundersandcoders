@@ -96,6 +96,7 @@
     font-size: 15px;
     text-decoration: none;
 }
+
 }
 
 /* main-content */
@@ -217,18 +218,33 @@
     height: 3px;
 }
 
+/* project */
 
+.item-container {
+    display: inline-block;
+    margin: 4px;
+    vertical-align: top;
+    width:274px;
+} 
+.item {
+    margin-left: 0;
+    background: white; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    float: left;
+}
+ 
   
 /* slider */
-
+/* 
 #body {
     margin: 10px 40px;
   }
   
   .home-product-new-hldr {
     position: relative;
-    left: 20%;
-    width:1140px;
+    left: 20%; */
+    /* width:1140px;
+    width: 30%;
   }  
     
   .home-product-new {
@@ -289,7 +305,7 @@
       background: white; 
       box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
       float: left;
-  }
+  } */
   
 
 
