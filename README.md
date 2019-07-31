@@ -11,4 +11,5 @@ application to founders and coders
 
 5 link to calculator https://codepen.io/ilgianso/pen/BXoJKG
 
-6 link to Carousel https://codepen.io/ilgianso/pen/XvdEaP
+6 add carousel inside the single page
+
