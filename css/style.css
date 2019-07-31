@@ -220,6 +220,10 @@
 
 /* project */
 
+.project-container {
+    margin-bottom: 20px;
+}
+
 .item-container {
     display: inline-block;
     margin: 4px;
@@ -232,85 +236,61 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     float: left;
 }
- 
-  
-/* slider */
-/* 
-#body {
-    margin: 10px 40px;
-  }
-  
-  .home-product-new-hldr {
+/* Slide Show */
+.button {
+    background-color: #A1B3A4;
+    padding:1em 2em;
+    margin:1em 1em 0.1em 1em;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+}
+.button:hover{
+    border-color: grey;
+}
+
+.btn-slider {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#image-slider{
+    display: none;
+    text-align: center;
+}
+#slides {
+    text-align: center;
     position: relative;
-    left: 20%; */
-    /* width:1140px;
-    width: 30%;
-  }  
-    
-  .home-product-new {
-    width:1140px;
-    overflow:hidden;
-  }
-  
-  .home-grid.products-grid.products-grid--max-4 {
-    transition:-ms-transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s, transform 0.5s ease 0s;
-    position:relative;
-    white-space:nowrap;
-  }
-  
-  .item-container {
-      display: inline-block;
-      margin: 4px;
-      vertical-align: top;
-      width:274px;
-  }  
-  
-  .slider-btn-hldr-left {
-      left: -32px;
-  }
-  
-  .slider-btn-hldr-right {
-      right: -32px;
-  }
-  
-  .slider-btn-hldr {
-      bottom: 0;
-      display: block;
-      padding: 0;
-      width: 24px;
-      position: absolute;
-      top: 40%;
-      z-index: 1;
-  }
-  
-  .slider-btn {
-      background-color: transparent;
-      border: 0 none;
-      color: buttontext;
-      cursor: pointer;
-      display: block;
-  }
-  
-  #left-btn {
-          display: none;
-  }
-  
-  .slider-btn svg{
-    width: 24px;
-    height: 24px;
-  }
-    
-  .products-grid .item {
-      margin-left: 0;
-      background: white; 
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-      float: left;
-  } */
-  
+    height: 600px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
 
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
 
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
 
-
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
 
 /* contact */
 
@@ -318,6 +298,7 @@
     padding: 20px;
     height: 260px;
     background-color: #3d3737;
+    margin-top: 20px;
 }
 
 .contact-text {
@@ -373,73 +354,3 @@
     color: #eae3e3
 }
 
-
-
-/* @media screen and (max-width: 600px) {
-    .top-bar {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo{
-        padding: 18px 0 0;
-    }
-    .menu ul{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 0;
-    }
-    .menu ul li{
-        padding: 5px;
-    }
-
-    .banner-text-items h2 {
-        font-size: 5px;
-        
-    }
-    .main-content{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-} */
-
-/* @media (max-width:800px) {
-    .top-bar {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo{
-        padding: 18px 0 0;
-    }
-    .menu ul{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 0;
-    }
-    .menu ul li{
-        padding: 5px;
-    }
-    .banner-text-items {
-        width: 70%;
-    }
-    .banner-text-items h2 {
-        font-size: 5px;
-    }
-    .main-content{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    } 
-} */

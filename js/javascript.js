@@ -1,71 +1,3 @@
-//slider
-
-
-// var right = 0;
-// var maxMargin;
-// var jumpMargin = 150;
-
-// function setWidth(){
-//   var boxwidth = document.querySelector(".container").offsetWidth;
-//   var displaywidth = document.querySelector(".row").offsetWidth;
-//   var displayheight = document.querySelector(".row").offsetHeight;
-//   var children = document.querySelectorAll(".row-container > .container").length;
-//   var outerboxwidth = children * boxwidth + (children*10);
-//   document.querySelector(".row-container").style.width = outerboxwidth+"px";
-//   document.querySelectorAll("button")[0].style.height = displayheight+"px";
-//   document.querySelectorAll("button")[1].style.height = displayheight+"px";
-//   maxMargin = outerboxwidth - displaywidth;
-// }
-
-// (function(){
-  
-//     var listEl = document.querySelector('.home-grid.products-grid.products-grid--max-4');
-//   var btnLeftEl = document.querySelector('#left-btn');
-//   var btnRightEl = document.querySelector('#right-btn');
-//   var count = 0;
-
-//   function slideImages(dir){
-//     var totalChildren = listEl.querySelectorAll(".item").length;
-//     dir === "left" ? ++count : --count;
-//     listEl.style.left = count * 286 + 'px';
-//     btnLeftEl.style.display = count < 0 ? "block" : "none";
-//     // Here, 4 is the number displayed at any given time
-//     btnRightEl.style.display = count > 4-totalChildren ? "block" : "none";
-//   }
-
-//   btnLeftEl.addEventListener("click", function(e) {
-//       slideImages("left");
-//   });
-//   btnRightEl.addEventListener("click", function(e) {
-//       slideImages("right");
-//   });
-
-  
-// })();
-
-
-
-
-
-
-
-// Arrow
-
-document.addEventListener('keydown', function(event) {
-  if (event.code == 'ArrowLeft') {
-    plusSlides(1)
-  }
-
-  if (event.code == 'ArrowRight') {
-    plusSlides(-1)
-  }
-});
-
-
-
-
-
-
 
 // Arrow Button to the Top
 
@@ -112,3 +44,80 @@ setInterval(() => {
 
 document.querySelector(".banner").style.backgroundImage ='url("./imgages/newsite.jpg")';
 
+// slide show
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide() {
+    goToSlide(currentSlide+1);
+}
+
+function previousSlide() {
+    goToSlide(currentSlide-1);
+}
+
+function goToSlide(n) {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (n+slides.length)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
+
+next.onclick = function() {
+    pauseSlideshow();
+    nextSlide();
+};
+previous.onclick = function() {
+    pauseSlideshow();
+    previousSlide();
+};
+
+var playing = true;
+var pauseButton = document.getElementById('pause');
+
+function pauseSlideshow() {
+    pauseButton.innerHTML = 'Play';
+    playing = false;
+    clearInterval(slideInterval);
+}
+
+function playSlideshow() {
+    pauseButton.innerHTML = 'Pause';
+    playing = true;
+    slideInterval = setInterval(nextSlide,2000);
+}
+
+pauseButton.onclick = function() {
+    if(playing) {
+    pauseSlideshow();
+  } else {
+    playSlideshow();
+  }
+};
+
+// Arrow
+
+document.addEventListener('keydown', function(event) {
+    if (event.code == 'ArrowLeft') {
+        previousSlide();
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.code == 'ArrowRight') {
+        nextSlide();
+    }
+  });
+
+// show slide
+function show() {
+  var x = document.getElementById("image-slider");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
